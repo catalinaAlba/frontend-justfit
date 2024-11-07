@@ -17,7 +17,7 @@ const manejarError = (error = new Error("Error desconocido")) => {
 }
 
 export class RequestsAPI {
-    static urlBackend = "http://localhost:3000";
+    static urlBackend = "https://backend-justfit.onrender.com";
 
     static getBarritas(opciones = {}) {
         const queryParams = new URLSearchParams({})
