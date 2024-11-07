@@ -1,0 +1,16 @@
+// _mixins.scss
+
+// Mixin para media queries reutilizables
+@mixin media-query($breakpoint) {
+    @if $breakpoint == mobile {
+      @media (max-width: 767px) {
+        @content;
+      }
+    }
+    @else if $breakpoint == desktop {
+      @media (min-width: 1024px) {
+        @content;
+      }
+    }
+  }
+  

@@ -1,0 +1,10 @@
+{
+  "name": "just-fit-frontend",
+  "version": "1.0.0",
+  "scripts": {
+    "sass": "sass --watch scss:dist/css"
+  },
+  "devDependencies": {
+    "sass": "^1.32.0"
+  }
+}
