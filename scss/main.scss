@@ -1,11 +1,4 @@
-// main.scss
-@import 'base/estilos';
-@import 'base/variables';
 
-@import 'components/buttons';
-@import 'components/cards';
-
-@import 'layout/header';
-@import 'layout/footer';
-
-@import 'utils/mixins';
+@use 'base/variables';
+@use 'base/estilos';
+@use 'utils/mixins';

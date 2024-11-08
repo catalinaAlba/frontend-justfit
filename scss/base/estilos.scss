@@ -1,34 +1,5 @@
-/* Tipografía */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@use 'variables';
 
-$font-family-base: 'Montserrat', sans-serif;
-
-// Jerarquías Tipográficas -------------------------------------------------------
-
-/* Cuadro de txt */
-$font-size-base-mobile: 16px;   // Tamaño para móviles
-$font-size-base-desktop: 16px;  // Tamaño para desktop
-
-/* Títulos (Mobile) */
-$font-size-h1-mobile: 2rem;
-$font-size-h2-mobile: 1.75rem;
-$font-size-h3-mobile: 1.5rem;
-
-/* Títulos (Desktop) */
-$font-size-h1-desktop: 3rem;
-$font-size-h2-desktop: 2.5rem;
-$font-size-h3-desktop: 2rem;
-
-
-// Colores -----------------------------------------------------------------------
-
-:root {
-  --white: #FFFFFF;
-  --dark: #1E1D1B;
-  /* --pane-padding: 5px 42px; */
-  // faltan coloresssss
-  
-}
 
 // Estilos generales -------------------------------------------------------------
 *{
@@ -71,13 +42,13 @@ h1{
 }
 
 .card {
-  background: white;
+  background: var(--white);
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 15px;
   transition: transform 0.2s;
-  width: 250px; /* Ancho fijo o ajustable según tus necesidades */
+  width: 250px; 
 }
 
 .card:hover {
@@ -92,11 +63,11 @@ h1{
 .card-title {
   font-size: 1.5em;
   margin: 0;
-  color: #333; /* Color para el título */
+  color: var(--dark); 
 }
 
 .card-type, .card-price, .card-id {
   margin: 5px 0; /* Espaciado entre párrafos */
-  color: #666; /* Color más claro para el texto */
+  color: var(--dark); /* Color más claro para el texto */
 }
 

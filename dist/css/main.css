@@ -50,13 +50,13 @@ h1 {
 }
 
 .card {
-  background: white;
+  background: var(--white);
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 15px;
   transition: transform 0.2s;
-  width: 250px; /* Ancho fijo o ajustable según tus necesidades */
+  width: 250px;
 }
 
 .card:hover {
@@ -71,12 +71,12 @@ h1 {
 .card-title {
   font-size: 1.5em;
   margin: 0;
-  color: #333; /* Color para el título */
+  color: var(--dark);
 }
 
 .card-type, .card-price, .card-id {
   margin: 5px 0; /* Espaciado entre párrafos */
-  color: #666; /* Color más claro para el texto */
+  color: var(--dark); /* Color más claro para el texto */
 }
 
 /*# sourceMappingURL=main.css.map */
