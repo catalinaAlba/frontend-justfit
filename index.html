@@ -13,20 +13,34 @@
     <link rel="stylesheet" href="dist/css/main.css">
 </head>
 
+
 <body>
     <div class="contenedor">
-        <header>
-            <nav class="nav">
-                <h1>JUST FIT</h1>
+        <header class="navbar">
+            <div class="navbar-logo">
+                <a href="#">JUST FIT</a>
+            </div>
+            <nav class="navbar-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="">Barritas</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
             </nav>
         </header>
-        
+
 
         <section id="section-barritas">
+            <div class="tipos-barritas-buttons">
+                <button class="clasica-option" data-value="clasica">Clásicas</button>
+                <button class="vegana-option" data-value="vegana">Veganas</button>
+                <button class="celiaca-option" data-value="celiaca">Celíacas</button>
+                <button class="keto-option" data-value="keto">Keto</button>
+            </div>
             <div id="listado-barritas"></div>
             <div id="lista-error"></div>
         </section>
-        
+
         <footer></footer>
     </div>
     <script src='js/index.js' type="module"></script>

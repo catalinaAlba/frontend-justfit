@@ -2,7 +2,7 @@
 // Mixin para media queries reutilizables
 @mixin media-query($breakpoint) {
     @if $breakpoint == mobile {
-      @media (max-width: 767px) {
+      @media (max-width: 768px) {
         @content;
       }
     }
