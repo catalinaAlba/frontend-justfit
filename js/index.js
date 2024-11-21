@@ -1,6 +1,9 @@
 import Barrita from "../Models/Barrita.js"
 import { RequestsAPI } from "../RequestsAPI.js";
-import { imprimir, obtenerValorInput } from "../utils/helpers.js";
+import { eventClkickCerrarSesion, imprimir, obtenerValorInput, validarSesion } from "../utils/helpers.js";
+
+/* validarSesion();
+eventClkickCerrarSesion(); */
 
 
 const mostrarListaBarritas = (data) => {

@@ -1,13 +1,39 @@
 @charset "UTF-8";
 /* Tipografía */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
 /* Cuadro de txt */
 /* Títulos (Mobile) */
 /* Títulos (Desktop) */
 :root {
   --white: #FFFFFF;
   --dark: #1E1D1B;
-  /* --pane-padding: 5px 42px; */
+  --dark300: #949494;
+  --dark200: #D0D0D0;
+  --dark100: #EDEDED;
+  --violeta400: #7C71C9;
+  --violeta300: #A199DD;
+  --violeta200: #D8D4FA;
+  --violeta100: #F1EFFF;
+  --violeta600: #362E71;
+  --verde400: #91B04A;
+  --verde300: #C3DD8A;
+  --verde200: #DAECB1;
+  --verde100: #F5FFDD;
+  --verde600: #5C7D10;
+  --naranja400: #C39041;
+  --naranja300: #E8C186;
+  --naranja200: #F3DBB4;
+  --naranja100: #FFF5E7;
+  --naranja600: #B17415;
+  --azul400: #4FACA9;
+  --azul300: #9FDEDC;
+  --azul200: #C6F4F3;
+  --azul100: #E7FFFE;
+  --azul600: #0F827E;
 }
 
 /*# sourceMappingURL=variables.css.map */

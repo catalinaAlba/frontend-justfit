@@ -1,0 +1,88 @@
+button {
+  all: unset;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.cta-btn {
+  display: inline-flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 150px;
+  border: 2px solid var(--violeta400);
+  background-color: var(--violeta400);
+  color: var(--white);
+}
+.cta-btn:hover {
+  background-color: var(--violeta600);
+  border: 2px solid var(--violeta600);
+}
+.cta-btn--form {
+  width: 150px;
+}
+
+.ghost-btn {
+  display: inline-flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 150px;
+  border: 2px solid var(--violeta400);
+  background-color: transparent;
+}
+.ghost-btn:hover {
+  background-color: var(--violeta400);
+  color: var(--white);
+}
+.ghost-btn--clasica {
+  border: 2px solid var(--violeta400);
+}
+.ghost-btn--clasica:hover {
+  background-color: var(--violeta400);
+  color: var(--white);
+}
+.ghost-btn--clasica:focus {
+  background-color: var(--violeta400);
+  color: var(--white);
+}
+.ghost-btn--vegana {
+  border: 2px solid var(--verde400);
+}
+.ghost-btn--vegana:hover {
+  background-color: var(--verde400);
+  color: var(--white);
+}
+.ghost-btn--vegana:active {
+  background-color: var(--verde400);
+  color: var(--white);
+}
+.ghost-btn--celiaca {
+  border: 2px solid var(--naranja400);
+}
+.ghost-btn--celiaca:hover {
+  background-color: var(--naranja400);
+  color: var(--white);
+}
+.ghost-btn--celiaca:active {
+  background-color: var(--naranja400);
+  color: var(--white);
+}
+.ghost-btn--keto {
+  border: 2px solid var(--azul400);
+}
+.ghost-btn--keto:hover {
+  background-color: var(--azul400);
+  color: var(--white);
+}
+.ghost-btn--keto:focus {
+  background-color: var(--azul400);
+  color: var(--white);
+}
+
+/*# sourceMappingURL=buttons.css.map */

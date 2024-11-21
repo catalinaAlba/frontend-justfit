@@ -1,0 +1,30 @@
+.card {
+    background: var(--white);
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.2s;
+    width: 250px; 
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-title {
+    font-size: 1.5em;
+    margin: 0;
+    color: var(--dark);
+  }
+  
+  .card-type, .card-price, .card-id {
+    margin: 5px 0;
+    color: var(--dark);
+  }
+  

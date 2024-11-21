@@ -1,0 +1,91 @@
+body {
+  background-color: var(--violeta100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: var(--dark);
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+#login-form {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+#register-form {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 3px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+h1 {
+  margin: 30px 0 30px 0;
+  font-size: 24px;
+  color: var(--dark);
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--dark);
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--dark200);
+  border-radius: 3px;
+  font-size: 16px;
+  color: var(--dark);
+  background-color: #f9f9f9;
+  transition: border-color 0.3s;
+}
+.input-group input:focus {
+  border-color: var(--violeta400);
+  outline: none;
+}
+
+.form-final-prompt {
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--dark);
+}
+
+a .ghost-btn {
+  color: var(--violeta400);
+}
+
+#login-link {
+  color: var(--violeta400);
+  text-decoration: none;
+}
+
+#login-link:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=login-register.css.map */

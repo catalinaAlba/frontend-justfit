@@ -1,0 +1,105 @@
+
+button {
+    all: unset;
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+}
+
+// CTA ----------------------------------------------------
+.cta-btn {
+    display: inline-flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 150px;
+    border: 2px solid var(--violeta400);
+    background-color: var(--violeta400);
+    color: var(--white);
+
+    
+    &:hover {
+        background-color: var(--violeta600);
+        border: 2px solid var(--violeta600);
+    }
+
+    &--form{
+        width: 150px;
+    }
+}
+
+// GHOST --------------------------------------------------
+.ghost-btn {
+    display: inline-flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 150px;
+    border: 2px solid var(--violeta400);
+    background-color: transparent;
+
+    &:hover {
+        background-color: var(--violeta400);
+        color: var(--white);
+    }
+
+    &--clasica {
+        border: 2px solid var(--violeta400);
+
+        &:hover {
+            background-color: var(--violeta400);
+            color: var(--white);
+        }
+
+        &:focus {
+            background-color: var(--violeta400);
+            color: var(--white);
+        }
+    }
+
+    &--vegana {
+        border: 2px solid var(--verde400);
+
+        &:hover {
+            background-color: var(--verde400);
+            color: var(--white);
+        }
+
+        &:active {
+            background-color: var(--verde400);
+            color: var(--white);
+        }
+    }
+
+    &--celiaca {
+        border: 2px solid var(--naranja400);
+
+        &:hover {
+            background-color: var(--naranja400);
+            color: var(--white);
+        }
+
+        &:active {
+            background-color: var(--naranja400);
+            color: var(--white);
+        }
+    }
+
+    &--keto {
+        border: 2px solid var(--azul400);
+
+        &:hover {
+            background-color: var(--azul400);
+            color: var(--white);
+        }
+
+        &:focus {
+            background-color: var(--azul400);
+            color: var(--white);
+        }
+    }
+}

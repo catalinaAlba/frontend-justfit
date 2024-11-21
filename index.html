@@ -10,40 +10,62 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest"> -->
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=package_2" />
+
+
+
     <link rel="stylesheet" href="dist/css/main.css">
 </head>
 
 
 <body>
-    <div class="contenedor">
-        <header class="navbar">
-            <div class="navbar-logo">
-                <a href="#">JUST FIT</a>
-            </div>
-            <nav class="navbar-menu">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
+    <header>
+        <div class="navbar">
+            <a class="navbar-logo" href="index.html">
+                <img src="img/logo.svg" alt="logo JUST FIT">
+            </a>
+            
+            <nav>
+                <ul class="menu-links">
+                    <li><a href="">Planes de alimentación</a></li>
                     <li><a href="">Barritas</a></li>
                     <li><a href="">Contacto</a></li>
                 </ul>
             </nav>
-        </header>
-
-
+            <div class="navbar-operations">
+                <a class="ghost-btn ghost-btn--ingresar" href="login.html">Ingresar</a>
+                
+                <a class="box" href="index.html">
+                    <span class="material-symbols-rounded">package_2</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="banner"></div>
+    </header>
+    
+    
+    <div class="contenedor">
         <section id="section-barritas">
             <div class="tipos-barritas-buttons">
-                <button class="clasica-option" data-value="clasica">Clásicas</button>
-                <button class="vegana-option" data-value="vegana">Veganas</button>
-                <button class="celiaca-option" data-value="celiaca">Celíacas</button>
-                <button class="keto-option" data-value="keto">Keto</button>
+                <button class="ghost-btn ghost-btn--clasica" class="clasica-option"
+                    data-value="clasica">Clásicas</button>
+                <button class="ghost-btn ghost-btn--vegana" class="vegana-option" data-value="vegana">Veganas</button>
+                <button class="ghost-btn ghost-btn--celiaca" class="celiaca-option"
+                    data-value="celiaca">Celíacas</button>
+                <button class="ghost-btn ghost-btn--keto" class="keto-option" data-value="keto">Keto</button>
             </div>
             <div id="listado-barritas"></div>
             <div id="lista-error"></div>
+            <p style="height: 1500px;"></p>
         </section>
 
         <footer></footer>
     </div>
     <script src='js/index.js' type="module"></script>
+    <script src='js/navbar.js' type="module"></script>
 </body>
 
 </html>

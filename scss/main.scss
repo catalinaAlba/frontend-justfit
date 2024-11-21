@@ -1,5 +1,20 @@
 
+
+@use 'base/globales';
 @use 'base/variables';
-@use 'base/estilos';
-@use 'layouts/header';
+
+
 @use 'utils/mixins';
+
+
+@use 'components/buttons';
+@use 'components/cards';
+
+
+@use 'layout/header';
+
+@use 'pages/listadobarritas';
+/* @use 'pages/login-register'; */
+
+
+
