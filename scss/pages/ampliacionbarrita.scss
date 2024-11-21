@@ -1,0 +1,59 @@
+
+
+.barrita-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: var(--white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+}
+
+.barrita-image {
+    flex: 1;
+    max-width: 500px;
+    margin-right: 20px;
+}
+
+.barrita-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.barrita-details {
+    flex: 2;
+    max-width: 600px;
+}
+
+.barrita-details h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.barrita-details h3 {
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.barrita-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.barrita-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.add-to-box {
+    font-size: 18px;
+}

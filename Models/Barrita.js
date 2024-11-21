@@ -14,7 +14,7 @@ export default class Barrita {
     }
 
     mostrarEnLista() {
-      return `
+        return `
           <div class="card" id="${this.id}">
               <div class="card-content">
                   <strong class="card-title">${this.sabor}</strong>
@@ -24,5 +24,29 @@ export default class Barrita {
               </div>
           </div>
       `;
-  }  
+    }
+
+    mostrarAmpliacion() {
+        return `
+        <div class="barrita-container">
+           
+            <div class="barrita-image">
+                <img src=" <!-- AGREGAR THIS.IMG -->" alt="Barrita x">
+            </div>
+
+            <!-- Detalles del producto -->
+            <div class="barrita-info">
+                <h1>Barrita de ${this.sabor}</h1>
+                <h3>${this.tipo}</h3>
+                <p class="barrita-description">
+                    Disfruta de la mejor barrita energética con ingredientes naturales y un sabor delicioso. Ideal para recargar energías antes o después de tu entrenamiento.
+                </p>
+                
+                <p class="barrita-price">$${this.precio.toFixed(2)}</p>
+
+                <button class="cta-btn" class="add-to-box">Añadir <!-- AGREGAR ICONO DE BOX --></button>
+            </div>
+        </div>
+        `;
+    }
 }

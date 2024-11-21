@@ -23,6 +23,12 @@ const mostrarListaBarritas = (data) => {
         )
         .join("");
     imprimir("#listado-barritas", listadoBarritas);
+
+    document.querySelectorAll(".card").forEach((itemListado) => {
+        itemListado.addEventListener("click", () => {
+            document.location.replace(`ampliacion-barrita.html?id=${itemListado.id}`)
+        })
+    })
 }
 
 const mostrarError = (error) => {
