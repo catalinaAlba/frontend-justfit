@@ -69,7 +69,7 @@ button {
             color: var(--white);
         }
 
-        &:active {
+        &:focus {
             background-color: var(--verde400);
             color: var(--white);
         }
@@ -83,7 +83,7 @@ button {
             color: var(--white);
         }
 
-        &:active {
+        &:focus {
             background-color: var(--naranja400);
             color: var(--white);
         }
