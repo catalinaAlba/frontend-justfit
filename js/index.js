@@ -45,9 +45,12 @@ const obtenerBarritas = (filtroTipo = "") => {
 obtenerBarritas();
 
 const agregarEventosDeFiltro = () => {
-    document.querySelectorAll(".tipos-barritas-buttons button").forEach((button) => {
+    const botones =document.querySelectorAll(".tipos-barritas-buttons button");
+    botones.forEach((button) => {
         button.addEventListener("click", () => {
+            botones.forEach(btn=> btn.classList.remove("activa"))
             const tipoSeleccionado = button.getAttribute("data-value");
+            button.classList.add("activa")
             obtenerBarritas(tipoSeleccionado);
         });
     });    

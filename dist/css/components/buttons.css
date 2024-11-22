@@ -47,7 +47,7 @@ button {
   background-color: var(--violeta400);
   color: var(--white);
 }
-.ghost-btn--clasica:focus {
+.ghost-btn--clasica.activa {
   background-color: var(--violeta400);
   color: var(--white);
 }
@@ -58,7 +58,7 @@ button {
   background-color: var(--verde400);
   color: var(--white);
 }
-.ghost-btn--vegana:active {
+.ghost-btn--vegana.activa {
   background-color: var(--verde400);
   color: var(--white);
 }
@@ -69,7 +69,7 @@ button {
   background-color: var(--naranja400);
   color: var(--white);
 }
-.ghost-btn--celiaca:active {
+.ghost-btn--celiaca.activa {
   background-color: var(--naranja400);
   color: var(--white);
 }
@@ -80,7 +80,7 @@ button {
   background-color: var(--azul400);
   color: var(--white);
 }
-.ghost-btn--keto:focus {
+.ghost-btn--keto.activa {
   background-color: var(--azul400);
   color: var(--white);
 }

@@ -55,7 +55,7 @@ button {
             color: var(--white);
         }
 
-        &:focus {
+        &.activa {
             background-color: var(--violeta400);
             color: var(--white);
         }
@@ -69,7 +69,7 @@ button {
             color: var(--white);
         }
 
-        &:focus {
+        &.activa {
             background-color: var(--verde400);
             color: var(--white);
         }
@@ -83,7 +83,7 @@ button {
             color: var(--white);
         }
 
-        &:focus {
+        &.activa {
             background-color: var(--naranja400);
             color: var(--white);
         }
@@ -97,9 +97,11 @@ button {
             color: var(--white);
         }
 
-        &:focus {
+        &.activa{
             background-color: var(--azul400);
             color: var(--white);
-        }
+        } 
     }
+
+    
 }
