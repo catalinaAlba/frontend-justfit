@@ -3,9 +3,9 @@ import { RequestsAPI } from "../RequestsAPI.js";
 import { imprimir } from "../utils/helpers.js";
 
 
-const mostrarListaBarritas = (data) => {
 
-    console.log("datos recibidos", data)
+
+const mostrarListaBarritas = (data) => {
     imprimir(".lista-error", "")
 
     if (data.length === 0) {
@@ -27,11 +27,9 @@ const mostrarListaBarritas = (data) => {
         })
     })
 }
-
 const mostrarError = (error) => {
     imprimir(".lista-error", error)
 }
-
 
 const obtenerBarritas = (filtroTipo = "") => {
     // Si hay un tipo, se pasa el filtro a la solicitud
@@ -39,18 +37,4 @@ const obtenerBarritas = (filtroTipo = "") => {
         .then(mostrarListaBarritas)
         .catch(mostrarError);
 };
-obtenerBarritas();
-
-const agregarEventosDeFiltro = () => {
-    const botones =document.querySelectorAll(".tipos-barritas-buttons button");
-    botones.forEach((button) => {
-        button.addEventListener("click", () => {
-            botones.forEach(btn=> btn.classList.remove("activa"))
-            const tipoSeleccionado = button.getAttribute("data-value");
-            button.classList.add("activa")
-            obtenerBarritas(tipoSeleccionado);
-        });
-    });    
-};
-
-agregarEventosDeFiltro();
+obtenerBarritas("celiaca");

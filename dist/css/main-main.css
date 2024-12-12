@@ -161,15 +161,20 @@ button {
 
 .card-title {
   font-size: 1.2em;
-  margin: 0;
   color: var(--dark);
 }
 
 .card-type,
-.card-price,
 .card-id {
   margin: 5px 0;
   color: var(--dark);
+  line-height: 1.4rem;
+}
+
+.card-price {
+  margin: 5px 0;
+  color: var(--violeta600);
+  font-weight: 700;
 }
 
 header {
@@ -239,6 +244,93 @@ header {
 
 .box .material-symbols-rounded:hover {
   color: var(--violeta400);
+}
+
+.banner {
+  width: 100%;
+  height: 600px;
+  background-image: url("https://res.cloudinary.com/dbkdcvezf/image/upload/v1734034319/pexels-victorfreitas-8411eeeee545430_s089qk.jpg");
+  background-size: cover;
+  background-position: 50% 30%;
+  margin-bottom: 80px;
+}
+
+.listado-barritas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 20px;
+  padding: 40px 0;
+}
+
+#section-destacados {
+  border-radius: 8px;
+  background-color: var(--violeta100);
+  padding: 40px 80px 20px;
+  margin-bottom: 100px;
+}
+
+#section-planes {
+  border-radius: 8px;
+  padding: 20px;
+}
+
+#section-planes h2 {
+  margin-bottom: 40px;
+}
+
+#seccion-filtros-sabor {
+  background-color: var(--violeta100);
+  flex: 1;
+  border-radius: 8px;
+}
+
+#section-barritas {
+  padding: 0 0 0 40px;
+  flex: 3;
+}
+
+/*
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+*/
+.barrita-image {
+  flex: 1;
+}
+
+.barrita-info {
+  flex: 1.2;
+}
+
+.barrita-image {
+  background-color: var(--violeta100);
+  border-radius: 8px;
+}
+
+.barrita-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.barrita-info h3 {
+  font-size: 1.2rem;
+  letter-spacing: 1.6;
+  margin-bottom: 20px;
+}
+
+.barrita-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark300);
+  margin-bottom: 20px;
+}
+
+.barrita-price {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--dark300);
+  margin-bottom: 20px;
 }
 
 .body-background {
@@ -336,67 +428,6 @@ a .ghost-btn {
 
 #login-link:hover {
   text-decoration: underline;
-}
-
-#seccion-filtros-sabor {
-  background-color: var(--violeta100);
-  flex: 1;
-  border-radius: 8px;
-}
-
-#section-barritas {
-  padding: 0 0 0 40px;
-  flex: 3;
-}
-
-#listado-barritas {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 20px;
-  padding: 40px 0;
-}
-
-/*
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-*/
-.barrita-image {
-  flex: 1;
-}
-
-.barrita-info {
-  flex: 1.2;
-}
-
-.barrita-image {
-  background-color: var(--violeta100);
-  border-radius: 8px;
-}
-
-.barrita-image img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.barrita-info h3 {
-  font-size: 1.2rem;
-  letter-spacing: 1.6;
-  margin-bottom: 20px;
-}
-
-.barrita-description {
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--dark300);
-  margin-bottom: 20px;
-}
-
-.barrita-price {
-  font-size: 24px;
-  font-weight: bold;
-  color: var(--dark300);
-  margin-bottom: 20px;
 }
 
 .layout {

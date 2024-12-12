@@ -25,8 +25,8 @@ const manejarError = (error = new Error("Error desconocido")) => {
 }
 
 
-export class RequestsAPI {
-    static urlBackend = "https://backend-justfit.onrender.com";
+export class RequestsAPI {/* https://backend-justfit.onrender.com */
+    static urlBackend = "http://localhost:3000";
 
     //// usuario login - registrar - logout
     static login(email, password) {

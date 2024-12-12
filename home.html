@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUST FIT - Home</title>
+
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=package_2" />
+
+    <link rel="stylesheet" href="dist/css/main-main.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <a class="navbar-logo" href="home.html">
+                <img src="img/logo.svg" alt="logo JUST FIT">
+            </a>
+
+            <nav>
+                <ul class="menu-links">
+                    <li><a href="">Planes de alimentación</a></li>
+                    <li><a href="index.html">Barritas</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="navbar-operations">
+                <a class="ghost-btn ghost-btn--ingresar" href="login.html">Ingresar</a>
+
+                <a class="box" href="pedido.html">
+                    <span class="material-symbols-rounded">package_2</span>
+                    <p>pedido</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="banner"></div>
+    </header>
+
+
+    <main class="contenedor">
+        <section id="section-destacados">
+            <h2>Nuestras nuevas barritas Celíacas</h2>
+            <div class="listado-barritas"></div>
+            <div class="lista-error"></div>
+        </section>
+
+        <section id="section-planes">
+            <h2>Suscripciones</h2>
+            <div class="layout">
+                <div class="card">
+                    <div class="card-content">
+                        <strong class="card-title">Energía Inicial</strong>
+                        <p class="card-type">El plan de entrada para los que quieren empezar a disfrutar de las barritas proteicas, ideal para quienes necesitan un pequeño impulso en su día a día.</p>
+                        <p class="card-price"> 10 barritas al mes.</p>
+                        <p class="card-id">Fácil acceso a una opción saludable y energética, perfecto para quienes están empezando a incorporar la proteína en su dieta.</p>
+                    </div>
+                </div>
+
+                <div class="card" id="${this.id}">
+                    <div class="card-content">
+                        <strong class="card-title">Fuerza Intermedia</strong>
+                        <p class="card-type">El plan intermedio, ideal para los que tienen un ritmo de vida activo o entrenan de manera regular. Un poco más de barritas para cubrir tus necesidades de energía y recuperación.</p>
+                        <p class="card-price">20 barritas al mes.</p>
+                        <p class="card-id"> Más variedad y cantidad para quienes buscan un aporte constante de proteína sin comprometer la comodidad. Perfecto para quienes entrenan con frecuencia.</p>
+                    </div>
+                </div>
+
+                <div class="card" id="${this.id}">
+                    <div class="card-content">
+                        <strong class="card-title">Rendimiento Máximo</strong>
+                        <p class="card-type"> El plan premium para los atletas más exigentes o personas con un estilo de vida de entrenamiento constante. Este plan ofrece la máxima cantidad de barritas para asegurar un aporte adecuado de proteína a lo largo del mes.</p>
+                        <p class="card-price"> 30 barritas al mes.</p>
+                        <p class="card-id"> Ideal para quienes buscan mantener un alto rendimiento físico, recuperarse rápidamente o simplemente disfrutan de las barritas proteicas como una merienda o snack saludable todos los días.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <script src='js/home.js' type="module"></script>
+    <script src='js/navbar.js' type="module"></script>
+</body>
+
+</html>
