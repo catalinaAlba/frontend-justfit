@@ -1,4 +1,3 @@
-
 button {
     all: unset;
     background: none;
@@ -20,13 +19,13 @@ button {
     background-color: var(--violeta400);
     color: var(--white);
 
-    
+
     &:hover {
         background-color: var(--violeta600);
         border: 2px solid var(--violeta600);
     }
 
-    &--form{
+    &--form {
         width: 150px;
     }
 }
@@ -97,11 +96,9 @@ button {
             color: var(--white);
         }
 
-        &.activa{
+        &.activa {
             background-color: var(--azul400);
             color: var(--white);
-        } 
+        }
     }
-
-    
 }

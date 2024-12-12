@@ -1,9 +1,6 @@
 import Barrita from "../Models/Barrita.js"
 import { RequestsAPI } from "../RequestsAPI.js";
-import { eventClkickCerrarSesion, imprimir, obtenerValorInput, validarSesion } from "../utils/helpers.js";
-
-/* validarSesion();
-eventClkickCerrarSesion(); */
+import { imprimir } from "../utils/helpers.js";
 
 
 const mostrarListaBarritas = (data) => {
@@ -12,7 +9,7 @@ const mostrarListaBarritas = (data) => {
     imprimir("#lista-error", "")
 
     if (data.length === 0) {
-        // Si no hay barritas para mostrar, mostramos un mensaje adecuado
+        // Si no hay barritas para mostrar, mostramos un mensaje
         imprimir("#listado-barritas", "<p>No hay barritas disponibles para este filtro.</p>");
         return;
     }

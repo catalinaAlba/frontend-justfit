@@ -1,8 +1,7 @@
 import Barrita from "../Models/Barrita.js";
 import { RequestsAPI } from "../RequestsAPI.js";
-import { imprimir, validarSesion } from "../utils/helpers.js";
+import { imprimir } from "../utils/helpers.js";
 
-/* validarSesion(); */
 
 const params = new URLSearchParams(window.location.search)
 const idBarrita = params.get("id")
@@ -16,7 +15,7 @@ const mostrarAmpliacion = (data) => {
     imprimir("#data-ampliacion", barrita.mostrarAmpliacion())
 }
 
-RequestsAPI.getProducto(idBarrita)
+RequestsAPI.getBarritaById(idBarrita)    
     .then(mostrarAmpliacion)
     .catch((error) => {
         mostrarError(error)

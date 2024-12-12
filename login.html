@@ -6,19 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JUST FIT - Login</title>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="dist/css/main.css">
+    <link rel="stylesheet" href="dist/css/main-main.css">
 </head>
 
 
-<body>
+<body class="body-background">
     <div class="login-container">
         <div id="login-form">
             <a href="index.html">
                 <img src="img/logo.svg" alt="logo JUST FIT">
             </a>
             <h1>Ingresar</h1>
-
-
+            
             <form>
                 <div class="input-group">
                     <label for="form-login-email">Email</label>
@@ -30,7 +29,7 @@
                     <input type="password" id="form-login-password" name="password" placeholder="" required>
                 </div>
 
-                <button type="submit" class="cta-btn cta-btn--form" id="form-login-submit">Ingresar</button>
+                <button type="submit" class="cta-btn" id="form-login-submit">Ingresar</button>
 
                 <div id="form-login-error" class="error"></div>
             </form>
@@ -38,6 +37,7 @@
             <p class="form-final-prompt">¿No tenés cuenta? Podés crearte una ahora.</p>
 
             <a href="registrarse.html" class="ghost-btn">Registrarse</a>
+            <div id="form-login-error"></div>
         </div>
     </div>
     <script src="js/login.js" type="module"></script>

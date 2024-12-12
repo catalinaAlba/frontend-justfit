@@ -15,7 +15,7 @@ export const validarSesion = () => {
     const estaEnPagPublica = estaEnLogin || estaEnRegistrarse;
 
     if (usuarioLogueado) {
-        if (estaEnLogin || estaEnRegistrarse) {
+        if (estaEnPagPublica) {
             document.location.replace("index.html")
         }
     }
