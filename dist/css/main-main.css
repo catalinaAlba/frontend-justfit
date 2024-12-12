@@ -159,6 +159,12 @@ button {
   flex-direction: column;
 }
 
+.card-image {
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 8px;
+}
+
 .card-title {
   font-size: 1.2em;
   color: var(--dark);
@@ -290,27 +296,12 @@ header {
   flex: 3;
 }
 
-/*
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-*/
 .barrita-image {
   flex: 1;
 }
 
 .barrita-info {
   flex: 1.2;
-}
-
-.barrita-image {
-  background-color: var(--violeta100);
-  border-radius: 8px;
-}
-
-.barrita-image img {
-  width: 100%;
-  border-radius: 8px;
 }
 
 .barrita-info h3 {
