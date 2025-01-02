@@ -17,8 +17,8 @@ export default class Barrita {
         return `
           <div class="card" id="${this.id}">
               <div class="card-content">
-                    <div>
-                        <img src="${this.imagen}"  class="card-image">
+                    <div class="card-image">
+                        <img src="${this.imagen}">
                     </div>
                   <strong class="card-title">${this.sabor}</strong>
                   <p class="card-type">${this.tipo}</p>

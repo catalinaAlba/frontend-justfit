@@ -160,9 +160,19 @@ button {
 }
 
 .card-image {
-  margin-bottom: 10px;
   width: 100%;
+  aspect-ratio: 1/1; /* Hace el contenedor cuadrado */
+  overflow: hidden; /* Esconde las partes que se salen del contenedor */
+  position: relative;
+  margin-bottom: 10px;
   border-radius: 8px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Escala la imagen para cubrir completamente el contenedor */
+  object-position: center; /* Centra la imagen en caso de recorte */
 }
 
 .card-title {
