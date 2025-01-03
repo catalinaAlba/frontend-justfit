@@ -1,8 +1,10 @@
 import Barrita from "../Models/Barrita.js";
 import { RequestsAPI } from "../RequestsAPI.js";
-import { imprimir, obtenerValorInput, validarSesion } from "../utils/helpers.js";
+import { imprimir, obtenerValorInput, validarSesion, eventClickCerrarSesion } from "../utils/helpers.js";
 
-/* validarSesion(); */
+
+validarSesion();
+eventClickCerrarSesion();
 
 document.querySelector("#form-pedido-submit").addEventListener("click", () => {
     const nombre = obtenerValorInput("#pedido-nombre")

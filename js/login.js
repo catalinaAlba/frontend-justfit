@@ -12,7 +12,9 @@ btnLogin.addEventListener("click", () => {
     RequestsAPI.login(email, password)
         .then((data => {
             sessionStorage.setItem("session", data.session)
-            document.location.replace("index.html")
+            sessionStorage.setItem("user", JSON.stringify(data.user))
+            
+            document.location.replace("home.html")
         }))
         .catch((error) => {
             console.log(error)

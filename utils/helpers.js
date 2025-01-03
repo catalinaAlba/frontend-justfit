@@ -12,21 +12,27 @@ export const validarSesion = () => {
     const usuarioLogueado = sessionStorage.getItem("session");
     const estaEnLogin = document.location.pathname.includes("login.html");
     const estaEnRegistrarse = document.location.pathname.includes("registrarse.html");
-    const estaEnPagPublica = estaEnLogin || estaEnRegistrarse;
+    const estaEnPedido = document.location.pathname.includes("pedido.html");
+
 
     if (usuarioLogueado) {
-        if (estaEnPagPublica) {
-            document.location.replace("index.html")
+        if (estaEnLogin || estaEnRegistrarse) {
+            document.location.replace("home.html")
+        }
+    }
+    else {
+        if (estaEnPedido) {
+            document.location.replace("login.html")
         }
     }
 }
 
-export const eventClkickCerrarSesion=()=>{
-    document.querySelector("#boton-logout").addEventListener("click", ()=>{
+export const eventClickCerrarSesion = () => {
+    document.querySelector("#btn-logout").addEventListener("click", () => {
         sessionStorage.removeItem("session");
         RequestsAPI.logout()
-        .then(()=>{
-            document.location.replace("login.html")
-        })
+            .then(() => {
+                document.location.replace("login.html")
+            })
     })
 }

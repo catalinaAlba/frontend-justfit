@@ -22,7 +22,7 @@ export default class Barrita {
                     </div>
                   <strong class="card-title">${this.sabor}</strong>
                   <p class="card-type">${this.tipo}</p>
-                  <p class="card-price">$${this.precio.toFixed(2)}</p>
+                  <p class="card-price">$ ${this.precio.toFixed(2)}</p>
                   <p class="card-id">ID: ${this.id}</p>
               </div>
           </div>
@@ -44,8 +44,25 @@ export default class Barrita {
                     <p class="barrita-description">
                         Disfruta de la mejor barrita energética con ingredientes naturales y un sabor delicioso. Ideal para recargar energías antes o después de tu entrenamiento.
                     </p>
+
+                    <p class="barrita-price">$ ${this.precio.toFixed(2)}</p>
                     
-                    <p class="barrita-price">$${this.precio.toFixed(2)}</p>
+                    
+                    <h4>Ingredientes</h4>
+                    <ul class="barrita-ingredientes-list">
+                        <li>Whey protein</li>
+                        <li>Harina de avena</li>
+                        <li>Harina de avena integral</li>
+                        <li>Inulina</li>
+                        <li>Leche en polvo descremada</li>
+                        <li>Sucralosa</li>
+                    </ul>
+
+                    <h4>Envíos</h4>
+                    <p class="barrita-envio">
+                        Los costos de envío al interior del país se basan en los precios de la agencia elegida. También puedes retirar gratis en nuestros puntos de retiro.
+                    </p>
+                    
 
                     <button class="cta-btn" class="add-to-box">Añadir <!-- AGREGAR ICONO DE BOX --></button>
                 </section>

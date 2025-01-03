@@ -1,7 +1,8 @@
 import Barrita from "../Models/Barrita.js";
 import { RequestsAPI } from "../RequestsAPI.js";
-import { imprimir } from "../utils/helpers.js";
+import { imprimir, eventClickCerrarSesion } from "../utils/helpers.js";
 
+eventClickCerrarSesion();
 
 const params = new URLSearchParams(window.location.search)
 const idBarrita = params.get("id")

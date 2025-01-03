@@ -11,10 +11,17 @@ btnRegistrarse.addEventListener("click", () => {
     const email = obtenerValorInput("form-register-email");
     const password = obtenerValorInput("form-register-password")
 
+    if (!nombre || !apellido || !email || !password) {
+        imprimir("#form-register-error", "por favor complete todos los campos")
+        return;
+    }
+
     RequestsAPI.registrar(nombre, apellido, email, password)
         .then((data => {
             sessionStorage.setItem("session", data.session)
-            document.location.replace("index.html")
+            sessionStorage.setItem("user", JSON.stringify(data.user))
+            console.log(data)
+            document.location.replace("home.html")
         }))
         .catch((error) => {
             console.log(error)

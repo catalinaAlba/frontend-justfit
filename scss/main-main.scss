@@ -221,8 +221,10 @@ button {
 
 .card-image {
     width: 100%;
-    aspect-ratio: 1 / 1; /* Hace el contenedor cuadrado */
-    overflow: hidden; /* Esconde las partes que se salen del contenedor */
+    aspect-ratio: 1 / 1;
+    /* Hace el contenedor cuadrado */
+    overflow: hidden;
+    /* Esconde las partes que se salen del contenedor */
     position: relative;
     margin-bottom: 10px;
     border-radius: 8px;
@@ -231,8 +233,10 @@ button {
 .card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Escala la imagen para cubrir completamente el contenedor */
-    object-position: center; /* Centra la imagen en caso de recorte */
+    object-fit: cover;
+    /* Escala la imagen para cubrir completamente el contenedor */
+    object-position: center;
+    /* Centra la imagen en caso de recorte */
 }
 
 .card-title {
@@ -415,6 +419,10 @@ header {
     margin-bottom: 20px;
 }
 
+.barrita-info h4 {
+    font-size: 1rem;
+}
+
 .barrita-description {
     font-size: 16px;
     line-height: 1.6;
@@ -427,6 +435,37 @@ header {
     font-weight: bold;
     color: var(--dark300);
     margin-bottom: 20px;
+}
+
+.barrita-ingredientes-list {
+    list-style: none;
+    /* Quita los bullets predeterminados */
+    padding: 0;
+    margin: 25px;
+}
+
+.barrita-ingredientes-list li {
+    position: relative;
+    padding-left: 25px; /* Espacio para el nuevo bullet */
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: var(--dark);
+}
+
+.barrita-ingredientes-list li::before {
+    content: "•"; /* Define el bullet point */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: var(--violeta600);
+}
+
+.barrita-envio {
+    margin: 14px 0 30px 0;
+    color: var(--dark);
+    font-weight: 500;
 }
 
 
