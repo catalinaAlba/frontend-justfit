@@ -1,6 +1,6 @@
 import Barrita from "../Models/Barrita.js"
 import { RequestsAPI } from "../RequestsAPI.js";
-import { imprimir, eventClickCerrarSesion } from "../utils/helpers.js";
+import { imprimir, eventClickCerrarSesion, agregarBarritaAlLocalStorage, eliminarBarritaDelLocalStorage } from "../utils/helpers.js";
 
 
 eventClickCerrarSesion();
@@ -39,7 +39,7 @@ const mostrarListaBarritas = (data) => {
     });
 
     ////// EVENTO click en botón agregar para localStorage
-    document.querySelectorAll(".agregar-btn").forEach((buttonAgregar) => {
+    document.querySelectorAll(".btn-agregar").forEach((buttonAgregar) => {
 
         buttonAgregar.addEventListener("click", (event) => {
             
@@ -52,28 +52,24 @@ const mostrarListaBarritas = (data) => {
             agregarBarritaAlLocalStorage(barritaSeleccionada);
         });
     });
+
+        ////// EVENTO click en botón eliminar para localStorage
+        document.querySelectorAll(".btn-eliminar").forEach((buttonEliminar) => {
+
+            buttonEliminar.addEventListener("click", (event) => {
+                event.stopPropagation();
+        
+                const barritaId = buttonEliminar.getAttribute("data-id");
+                console.log("Clic en Eliminar del carrito, ID de la barrita:", barritaId);
+        
+                eliminarBarritaDelLocalStorage(barritaId);
+            });
+        });
 }
 
 const mostrarError = (error) => {
     imprimir(".lista-error", error)
 }
-
-// guarda en localStorage
-const agregarBarritaAlLocalStorage = (barrita) => {
-
-    let barritasSeleccionadas = JSON.parse(localStorage.getItem("barritasSeleccionadas")) || [];
-
-    // Verifica barrita no sea null o undefined antes de agregarla
-    if (barrita && barrita.id) {
-        barritasSeleccionadas.push(barrita);
-
-        localStorage.setItem("barritasSeleccionadas", JSON.stringify(barritasSeleccionadas));
-
-        console.log("Barrita agregada al carrito:", barrita);
-    } else {
-        console.log("Error: No se puede agregar una barrita inválida");
-    }
-};
 
 
 

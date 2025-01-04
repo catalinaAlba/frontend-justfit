@@ -24,13 +24,14 @@ export default class Barrita {
                   <p class="card-type">${this.tipo}</p>
                   <p class="card-price">$ ${this.precio.toFixed(2)}</p>
                   <p class="card-id">ID: ${this.id}</p>
-                  <button class="cta-btn agregar-btn" data-id="${this.id}">Agregar</button>
+                  <button class="cta-btn btn-agregar" data-id="${this.id}">Agregar</button>
+                  <button class="ghost-btn btn-eliminar" data-id="${this.id}">Eliminar</button>
               </div>
           </div>
       `;
     }
 
-    mostrarAmpliacion() {
+    mostrarEnAmpliacion() {
         return `
             <div class="layout">
             
@@ -65,8 +66,29 @@ export default class Barrita {
                     </p>
                     
 
-                    <button class="cta-btn" class="add-to-box"> Agregar <!-- AGREGAR ICONO DE BOX --></button>
+                    <button class="cta-btn btn-agregar" data-id="${this.id}"> Agregar <!-- AGREGAR ICONO DE BOX --></button>
+
+                    <button class="ghost-btn btn-eliminar" data-id="${this.id}"> Eliminar <!-- AGREGAR ICONO DE BOX --></button>
                 </section>
+            </div>
+        `;
+    }
+
+    mostrarEnPedido() {
+        return `
+            <div class="card-horizontal" id="${this.id}">
+                <div class="card-content-horizontal">
+                    <div class="card-image">
+                        <img src="${this.imagen}" alt="Imagen de la barrita">
+                    </div>
+                     <div class="card-info">
+                        <strong class="card-title">${this.sabor}</strong>
+                        <button class="btn-eliminar" data-id="${this.id}">Eliminar</button>
+                    </div>
+                    <div class="card-price">
+                        <p>$ ${this.precio.toFixed(2)}</p>
+                    </div>
+                </div>
             </div>
         `;
     }
