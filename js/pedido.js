@@ -3,7 +3,7 @@ import { RequestsAPI } from "../RequestsAPI.js";
 import { imprimir, obtenerValorInput, validarSesion, eventClickCerrarSesion, obtenerBarritasDelLocalStorage, eliminarBarritaDelLocalStorage } from "../utils/helpers.js";
 
 
-//validarSesion();
+validarSesion();
 eventClickCerrarSesion();
 
 
@@ -51,10 +51,10 @@ mostrarBarritasPedido();
 
 // Datos del pedido
 document.querySelector("#form-pedido-submit").addEventListener("click", () => {
-    const nombre = obtenerValorInput("#pedido-nombre");
-    const apellido = obtenerValorInput("#pedido-apellido");
-    const direccion = obtenerValorInput("#pedido-direccion");
-    const tarjeta = obtenerValorInput("#pedido-tarjeta");
+    const nombre = obtenerValorInput("pedido-nombre");
+    const apellido = obtenerValorInput("pedido-apellido");
+    const direccion = obtenerValorInput("pedido-direccion");
+    const tarjeta = obtenerValorInput("pedido-tarjeta");
 
     if (!nombre || !apellido || !direccion || !tarjeta) {
         imprimir("#pedido-error", "Faltan campos por completar");
@@ -69,13 +69,15 @@ document.querySelector("#form-pedido-submit").addEventListener("click", () => {
     }
 
     // Obtener solo los IDs de las barritas
-    const barritasIds = barritas.map(barrita => barrita.id);
+    const barritasIds = barritas.map(barrita => barrita.id.toString());
    
     RequestsAPI.postPedido(nombre, apellido, direccion, tarjeta, barritasIds)
         .then(() => {
-            document.location.replace("index.html");
+            console.log("Pedido realizado con éxito");
+            //document.location.replace("index.html");
         })
         .catch((error) => {
-            imprimir("#pedido-error", error);
+            console.error("Error al realizar el pedido:", error);
+            //imprimir("#pedido-error", error);
         });
 });
