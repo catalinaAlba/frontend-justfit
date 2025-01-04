@@ -24,6 +24,7 @@ export default class Barrita {
                   <p class="card-type">${this.tipo}</p>
                   <p class="card-price">$ ${this.precio.toFixed(2)}</p>
                   <p class="card-id">ID: ${this.id}</p>
+                  <button class="cta-btn agregar-btn" data-id="${this.id}">Agregar</button>
               </div>
           </div>
       `;
@@ -64,7 +65,7 @@ export default class Barrita {
                     </p>
                     
 
-                    <button class="cta-btn" class="add-to-box">Añadir <!-- AGREGAR ICONO DE BOX --></button>
+                    <button class="cta-btn" class="add-to-box"> Agregar <!-- AGREGAR ICONO DE BOX --></button>
                 </section>
             </div>
         `;

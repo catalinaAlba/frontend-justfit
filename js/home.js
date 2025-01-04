@@ -6,6 +6,8 @@ import { imprimir, eventClickCerrarSesion } from "../utils/helpers.js";
 eventClickCerrarSesion();
 
 const mostrarListaBarritas = (data) => {
+
+    console.log("datos recibidos", data)
     imprimir(".lista-error", "")
 
     if (data.length === 0) {
@@ -21,18 +23,63 @@ const mostrarListaBarritas = (data) => {
         .join("");
     imprimir(".listado-barritas", listadoBarritas);
 
+    ////// EVENTO click en card para ampliacion
     document.querySelectorAll(".card").forEach((itemListado) => {
-        itemListado.addEventListener("click", () => {
-            document.location.replace(`ampliacion-barrita.html?id=${itemListado.id}`)
-        })
-    })
+        
+        const barritaId = itemListado.getAttribute("id");
+
+        itemListado.addEventListener("click", (event) => {
+            if (event.target.classList.contains("agregar-btn")) {
+                console.log("Clic en botón Agregar, no redirigir");
+                return;
+            }
+            //console.log("Clic en la tarjeta, redirigiendo a ampliación con ID:", barritaId);
+            document.location.replace(`ampliacion-barrita.html?id=${barritaId}`);
+        });
+    });
+
+    ////// EVENTO click en botón agregar para localStorage
+    document.querySelectorAll(".agregar-btn").forEach((buttonAgregar) => {
+
+        buttonAgregar.addEventListener("click", (event) => {
+            
+            event.stopPropagation();
+
+            const barritaId = buttonAgregar.getAttribute("data-id");
+            //console.log("Clic en Agregar al carrito, ID de la barrita:", barritaId);
+            const barritaSeleccionada = data.find(barrita => barrita.id === parseInt(barritaId));
+
+            agregarBarritaAlLocalStorage(barritaSeleccionada);
+        });
+    });
 }
+
 const mostrarError = (error) => {
     imprimir(".lista-error", error)
 }
 
+// guarda en localStorage
+const agregarBarritaAlLocalStorage = (barrita) => {
+
+    let barritasSeleccionadas = JSON.parse(localStorage.getItem("barritasSeleccionadas")) || [];
+
+    // Verifica barrita no sea null o undefined antes de agregarla
+    if (barrita && barrita.id) {
+        barritasSeleccionadas.push(barrita);
+
+        localStorage.setItem("barritasSeleccionadas", JSON.stringify(barritasSeleccionadas));
+
+        console.log("Barrita agregada al carrito:", barrita);
+    } else {
+        console.log("Error: No se puede agregar una barrita inválida");
+    }
+};
+
+
+
+// filtrado Celiacas
 const obtenerBarritas = (filtroTipo = "") => {
-    // Si hay un tipo, se pasa el filtro a la solicitud
+
     RequestsAPI.getBarritas({ filtroTipo })
         .then(mostrarListaBarritas)
         .catch(mostrarError);

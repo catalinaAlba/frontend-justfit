@@ -1,3 +1,4 @@
+
 import { RequestsAPI } from "../RequestsAPI.js";
 
 export const obtenerValorInput = (idInput) => document.getElementById(idInput).value;
@@ -36,3 +37,4 @@ export const eventClickCerrarSesion = () => {
             })
     })
 }
+

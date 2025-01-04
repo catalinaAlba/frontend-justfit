@@ -74,8 +74,8 @@ export class RequestsAPI {
     }
 
     //// pedido
-    static postPedido(nombre, apellido, direccion, tarjeta) {
-        const body = JSON.stringify({ nombre, apellido, direccion, tarjeta })
+    static postPedido(nombre, apellido, direccion, tarjeta, barritas) {
+        const body = JSON.stringify({ nombre, apellido, direccion, tarjeta, barritas })
         return fetch(obtenerUrl("pedido"), { method: "POST", body, headers })
             .then(procesarResponse)
             .catch(manejarError)
