@@ -8,7 +8,7 @@ h1 {
 :root {
   --white: #FFFFFF;
   --dark: #1E1D1B;
-  --dark300: #949494;
+  --dark300: #797979;
   --dark200: #D0D0D0;
   --dark100: #EDEDED;
   --violeta400: #7C71C9;
@@ -72,6 +72,14 @@ button {
 }
 .cta-btn--form {
   width: 150px;
+}
+.cta-btn--suscribirme {
+  background-color: var(--dark300);
+  border: 2px solid var(--dark300);
+}
+.cta-btn--suscribirme:hover {
+  background-color: var(--dark);
+  border: 2px solid var(--dark);
 }
 
 .ghost-btn {
@@ -206,7 +214,8 @@ button {
 }
 
 .card-image {
-  width: 90px; /* Ajustado a un tamaño más pequeño */
+  width: 90px;
+  /* Ajustado a un tamaño más pequeño */
   height: auto;
   margin-right: 10px;
 }
@@ -332,6 +341,113 @@ header {
   margin-bottom: 80px;
 }
 
+/* Estilos del Footer */
+.footer {
+  background-color: var(--dark100);
+  color: var(--dark300);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 80px;
+  font-family: Arial, sans-serif;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-logo {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.footer h4 {
+  margin-bottom: 20px;
+}
+
+.small-text {
+  font-size: 12px;
+  color: var(--dark300);
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer-links a,
+.social-links a {
+  color: var(--dark300);
+  text-decoration: none;
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.footer-links a:hover,
+.social-links a:hover {
+  color: var(--dark300);
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.social-links a {
+  font-size: 18px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px 0;
+}
+
+.newsletter-input {
+  padding: 8px;
+  width: 200px;
+  margin-bottom: 10px;
+  border: 1px solid var(--violeta400);
+  border-radius: 4px;
+}
+
+.newsletter-button {
+  background-color: var(--white);
+  color: var(--dark);
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.small-text-links {
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+.small-text-links a {
+  color: var(--dark300);
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.small-text-links a:hover {
+  text-decoration: underline;
+}
+
 .listado-barritas {
   display: flex;
   flex-wrap: wrap;
@@ -408,14 +524,16 @@ header {
 
 .barrita-ingredientes-list li {
   position: relative;
-  padding-left: 25px; /* Espacio para el nuevo bullet */
+  padding-left: 25px;
+  /* Espacio para el nuevo bullet */
   margin-bottom: 5px;
   font-size: 1rem;
   color: var(--dark);
 }
 
 .barrita-ingredientes-list li::before {
-  content: "•"; /* Define el bullet point */
+  content: "•";
+  /* Define el bullet point */
   position: absolute;
   left: 0;
   top: 50%;
