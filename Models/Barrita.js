@@ -23,7 +23,6 @@ export default class Barrita {
                   <strong class="card-title">${this.sabor}</strong>
                   <p class="card-type">${this.tipo}</p>
                   <p class="card-price">$ ${this.precio.toFixed(2)}</p>
-                  <p class="card-id">ID: ${this.id}</p>
                   <button class="cta-btn btn-agregar" data-id="${this.id}">Agregar</button>
                   <button class="ghost-btn btn-eliminar" data-id="${this.id}">Eliminar</button>
               </div>
@@ -36,7 +35,7 @@ export default class Barrita {
             <div class="layout">
             
                 <div class="barrita-image">
-                    <img src="${this.imagen}"  class="card-image">
+                    <img src="${this.imagen}">
                 </div>
 
                 

@@ -285,7 +285,6 @@ button {
 
 .card-image {
     width: 90px;
-    /* Ajustado a un tamaño más pequeño */
     height: auto;
     margin-right: 10px;
 }
@@ -560,6 +559,7 @@ header {
 
 // PAGES ////////////////////////////////////////////////////////////////////////////////////////
 
+
 .listado-barritas {
     display: flex;
     flex-wrap: wrap;
@@ -568,10 +568,13 @@ header {
     padding: 40px 0;
 }
 
+.layout {
+    display: flex;
+    gap: 2.5rem;
+}
+
 
 // Home -------------------------------------------------------------------
-
-
 #section-destacados {
     border-radius: 8px;
     background-color: var(--violeta100);
@@ -615,7 +618,19 @@ header {
 
 .barrita-image {
     flex: 1;
+    width: 100%;
+    height: auto;
 }
+
+.barrita-image img {
+    width: 90%;
+    max-width: 400px; 
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
+}
+
 
 .barrita-info {
     flex: 1.2;
@@ -790,10 +805,6 @@ a .ghost-btn {
 
 
 // Pedido -------------------------------------------------------------------------------
-.layout {
-    display: flex;
-    gap: 2.5rem;
-}
 
 .details {
     flex: 3;

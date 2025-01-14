@@ -6,6 +6,7 @@ import { imprimir, obtenerValorInput, validarSesion, eventClickCerrarSesion, obt
 validarSesion();
 eventClickCerrarSesion();
 
+// Falta armar funcion para calcular el precio total de las pedido
 
 const mostrarBarritasPedido = () => {
     const barritasDelLocalStorage = obtenerBarritasDelLocalStorage();
