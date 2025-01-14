@@ -532,7 +532,6 @@ header {
 
 .barrita-ingredientes-list {
   list-style: none;
-  /* Quita los bullets predeterminados */
   padding: 0;
   margin: 25px;
 }
@@ -540,7 +539,6 @@ header {
 .barrita-ingredientes-list li {
   position: relative;
   padding-left: 25px;
-  /* Espacio para el nuevo bullet */
   margin-bottom: 5px;
   font-size: 1rem;
   color: var(--dark);
@@ -548,7 +546,6 @@ header {
 
 .barrita-ingredientes-list li::before {
   content: "•";
-  /* Define el bullet point */
   position: absolute;
   left: 0;
   top: 50%;
@@ -723,7 +720,14 @@ a .ghost-btn {
   margin-bottom: 20px;
 }
 
-.order-summary .total {
+.subtotal,
+.total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.total p, .total .precio-total {
   font-weight: bold;
   font-size: 1.2rem;
 }

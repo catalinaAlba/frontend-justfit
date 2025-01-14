@@ -75,10 +75,51 @@ document.querySelector("#form-pedido-submit").addEventListener("click", () => {
     RequestsAPI.postPedido(nombre, apellido, direccion, tarjeta, barritasIds)
         .then(() => {
             console.log("Pedido realizado con éxito");
-            //document.location.replace("index.html");
+            document.location.replace("index.html");
         })
         .catch((error) => {
             console.error("Error al realizar el pedido:", error);
-            //imprimir("#pedido-error", error);
+            imprimir("#pedido-error", error);
         });
 });
+
+
+
+
+const calcularSubtotal = () => {
+    const barritasDelLocalStorage = obtenerBarritasDelLocalStorage();
+
+    if (barritasDelLocalStorage.length === 0) {
+        return 0;
+    }    
+    const subtotal = barritasDelLocalStorage.reduce((total, barrita) => {
+        return total + barrita.precio;
+    }, 0);
+
+    return subtotal;
+};
+
+const calcularTotal = () => {
+    const subtotal = calcularSubtotal();
+    const envio = 5.00;
+    return subtotal + envio;
+};
+
+const mostrarResumenPedido = () => {
+    const subtotal = calcularSubtotal();
+    const total = calcularTotal();
+    
+    imprimir(".precio-subtotal", `$${subtotal.toFixed(2)}`);
+    imprimir(".precio-total", `$${total.toFixed(2)}`);
+};
+
+mostrarResumenPedido();
+
+// Asegúrate de actualizar el resumen cada vez que se agregue o elimine una barrita
+document.querySelectorAll(".btn-eliminar").forEach((buttonEliminar) => {
+    buttonEliminar.addEventListener("click", () => {
+        // Actualiza el resumen después de eliminar una barrita
+        mostrarResumenPedido();
+    });
+});
+

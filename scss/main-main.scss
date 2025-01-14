@@ -75,7 +75,6 @@ h1 {
 
 
 
-
 // Botones -------------------------------------------------------------
 button {
     all: unset;
@@ -624,7 +623,7 @@ header {
 
 .barrita-image img {
     width: 90%;
-    max-width: 400px; 
+    max-width: 400px;
     height: auto;
     object-fit: cover;
     object-position: center;
@@ -662,7 +661,6 @@ header {
 
 .barrita-ingredientes-list {
     list-style: none;
-    /* Quita los bullets predeterminados */
     padding: 0;
     margin: 25px;
 }
@@ -670,7 +668,6 @@ header {
 .barrita-ingredientes-list li {
     position: relative;
     padding-left: 25px;
-    /* Espacio para el nuevo bullet */
     margin-bottom: 5px;
     font-size: 1rem;
     color: var(--dark);
@@ -678,7 +675,6 @@ header {
 
 .barrita-ingredientes-list li::before {
     content: "•";
-    /* Define el bullet point */
     position: absolute;
     left: 0;
     top: 50%;
@@ -843,7 +839,7 @@ a .ghost-btn {
     display: flex;
     flex-direction: column;
     flex: 1 1 calc(50% - 1rem);
-    //Toma la mitad del ancho menos el espacio entre elementos
+
 }
 
 .block form input {
@@ -870,10 +866,19 @@ a .ghost-btn {
     margin-bottom: 20px;
 }
 
-.order-summary .total {
+.subtotal,
+.total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.total p, .total .precio-total {
     font-weight: bold;
     font-size: 1.2rem;
 }
+
+
 
 #form-pedido-submit {
     width: 90%;

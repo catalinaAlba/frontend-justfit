@@ -80,4 +80,4 @@ const obtenerBarritas = (filtroTipo = "") => {
         .then(mostrarListaBarritas)
         .catch(mostrarError);
 };
-obtenerBarritas("celiaca");
+obtenerBarritas("keto");
