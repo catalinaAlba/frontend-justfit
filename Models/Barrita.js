@@ -4,13 +4,15 @@ export default class Barrita {
     tipo;
     precio;
     imagen;
+    descripcion;
 
-    constructor(id = 0, sabor = "", tipo = "", precio = "", imagen = "") {
+    constructor(id = 0, sabor = "", tipo = "", precio = "", imagen = "", descripcion = "") {
         this.id = id;
         this.sabor = sabor;
         this.tipo = tipo;
         this.precio = precio;
         this.imagen = imagen;
+        this.descripcion = descripcion;
     }
 
     mostrarEnLista() {
@@ -42,12 +44,8 @@ export default class Barrita {
                 <section class="barrita-info">
                     <h1>Barrita de ${this.sabor}</h1>
                     <h3>${this.tipo.toUpperCase()}</h3>
-                    <p class="barrita-description">
-                        Disfruta de la mejor barrita energética con ingredientes naturales y un sabor delicioso. Ideal para recargar energías antes o después de tu entrenamiento.
-                    </p>
-
+                    <p class="barrita-description">${this.descripcion}</p>
                     <p class="barrita-price">$ ${this.precio.toFixed(2)}</p>
-                    
                     
                     <h4>Ingredientes</h4>
                     <ul class="barrita-ingredientes-list">
@@ -55,7 +53,6 @@ export default class Barrita {
                         <li>Harina de avena</li>
                         <li>Harina de avena integral</li>
                         <li>Inulina</li>
-                        <li>Leche en polvo descremada</li>
                         <li>Sucralosa</li>
                     </ul>
 

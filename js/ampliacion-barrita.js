@@ -15,7 +15,7 @@ const mostrarAmpliacion = (data) => {
     console.log("Datos recibidos:", data);
     console.log("Imagen recibida:", data.imagen);
 
-    const barrita = new Barrita(data.id, data.sabor, data.tipo, data.precio, data.imagen);
+    const barrita = new Barrita(data.id, data.sabor, data.tipo, data.precio, data.imagen, data.descripcion);
     imprimir("#data-ampliacion", barrita.mostrarEnAmpliacion());
 
 
